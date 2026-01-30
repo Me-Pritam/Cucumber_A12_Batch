@@ -15,7 +15,7 @@ public class HomePagePOM
 
     WebDriverWait wait;
 
-    By navBar = By.xpath("//nav[@id='narvbarx']");
+    By navBar = By.xpath("//nav");
 
     By phonesLink = By.xpath("//a[text()='Phones']");
 
@@ -36,6 +36,7 @@ public class HomePagePOM
 
     public WebElement accessNavBar()
     {
+        wait = new WebDriverWait(driver,Duration.ofSeconds(20));
         return wait.until(ExpectedConditions.visibilityOf(driver.findElement(navBar)));
     }
 

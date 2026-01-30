@@ -111,51 +111,22 @@ public class CartFeaturesUsingTagsStepDefinitions
     @When("The User adds two items to cart")
     public void the_user_adds_two_items_to_cart()
     {
-
-
-
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Nexus 6')]"))).click();
-//
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Add to cart']")))
-//                .click();
-//
-//        wait.until(ExpectedConditions.alertIsPresent()).accept();
-//
-//
-//
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Home')]"))).click();
-//
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Nokia lumia 1520']")))
-//                .click();
-//
-//        wait.until(ExpectedConditions.visibilityOf(hooks.web.getDriver().findElement(By.xpath("//a[text()='Add to cart']"))))
-//                .click();
-//
-//        wait.until(ExpectedConditions.alertIsPresent()).accept();
-        pom().navBar().clickOnHomeLink();
-        web.refreshPage();
         pom().homePage().selectDesiredItem("Nokia lumia 1520");
         pom().productDetail().clickOnAddToCartButton();
         pom().productDetail().acceptAlert();
 
-        web.refreshPage();
         pom().navBar().clickOnHomeLink();
-        web.refreshPage();
+
         pom().homePage().selectDesiredItem("Nexus 6");
         pom().productDetail().clickOnAddToCartButton();
         pom().productDetail().acceptAlert();
-
-        web.refreshPage();
-        pom().navBar().clickOnHomeLink();
-
-
     }
 
 
     @Then("The Two Products should be visible in the Cart")
     public void the_two_products_should_be_visible_in_the_cart()
     {
-        web.refreshPage();
+//        web.refreshPage();
 
         pom().navBar().clickOnCartLink();
 
