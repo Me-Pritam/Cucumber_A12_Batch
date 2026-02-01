@@ -21,7 +21,7 @@ public class ProductDetailPagePOM
     @FindBy(xpath = "//div[@id='more-information']/child::p")
     private WebElement itemDetails;
 
-    @FindBy(xpath = "//a[text()='Add to cart']")
+    @FindBy(xpath = "//a[contains(text(),'Add to cart')]")
     private WebElement itemAddToCartButton;
 
     WebDriverWait wait ;
@@ -51,7 +51,8 @@ public class ProductDetailPagePOM
     public void clickOnAddToCartButton()
     {
 
-        itemAddToCartButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(itemAddToCartButton)).click();
+
     }
 
     public void acceptAlert()

@@ -111,12 +111,15 @@ public class CartFeaturesUsingTagsStepDefinitions
     @When("The User adds two items to cart")
     public void the_user_adds_two_items_to_cart()
     {
+        web.refreshPage();
         pom().homePage().selectDesiredItem("Nokia lumia 1520");
+
         pom().productDetail().clickOnAddToCartButton();
         pom().productDetail().acceptAlert();
 
         pom().navBar().clickOnHomeLink();
 
+        web.refreshPage();
         pom().homePage().selectDesiredItem("Nexus 6");
         pom().productDetail().clickOnAddToCartButton();
         pom().productDetail().acceptAlert();
