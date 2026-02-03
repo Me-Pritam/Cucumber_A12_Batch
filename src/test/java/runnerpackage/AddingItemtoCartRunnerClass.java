@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "src/test/java/featurepackage/AddingItemtoCart.feature",
+        features = "src/test/java/featurepackage",
         dryRun = false,
         monochrome = true,
         glue = "stepdefinitionpackage",
